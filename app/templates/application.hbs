@@ -1,5 +1,18 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+  <div class="ui inverted menu" style="padding-left: 70px; padding-right: 70px">
+    {{#link-to 'index' class="red item"}} 
+      <i class="home icon"></i> Главная 
+    {{/link-to}}
+    {{#link-to 'device' class="red item"}} 
+      <i class="hdd icon"></i> Устройства 
+    {{/link-to}}
+    {{#link-to 'report' class="red item"}} 
+      <i class="clipboard icon"></i> Отчеты 
+    {{/link-to}}
+    {{#link-to 'about' class="red item"}}
+      <i class="info circle icon"></i> О программе
+    {{/link-to}}
+    {{#link-to 'login' class="right red item"}} Вход {{/link-to}}
+  </div>
+  <div class="body ui container">
+    {{outlet}}
+  </div>

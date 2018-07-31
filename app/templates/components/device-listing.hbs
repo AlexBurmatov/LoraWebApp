@@ -1,0 +1,10 @@
+<div class="ui relaxed divided list">
+    {{#each model as |device|}}
+        <div class="item">
+            <div class="content">
+                <a class="header">{{device.devName}}</a>
+                <div class="description">{{device.devEui}}</div>
+            </div>
+        </div>
+    {{/each}}
+</div>

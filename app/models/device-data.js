@@ -2,8 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   'ack': DS.attr(),
-  'cmd': DS.attr(),
-  'data': DS.attr(),
+  '_data': DS.attr(),
   'devEui': DS.attr(),
   'dr': DS.attr(),
   'fcnt': DS.attr(),

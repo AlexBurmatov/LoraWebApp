@@ -1,0 +1,16 @@
+<table class="ui celled table">
+  <thead>
+    <tr><th>Данные</th>
+    <th>Устройство</th>
+    <th>Номер пакета</th>
+  </tr></thead>
+  <tbody>
+    {{#each model as |packet|}}
+        <tr>
+            <td>{{packet._data}}</td>
+            <td>{{packet.devEui}}</td>
+            <td>{{packet.fcnt}}</td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>

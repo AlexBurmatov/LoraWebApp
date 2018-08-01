@@ -1,4 +1,4 @@
-<div class="ui relaxed divided list">
+<!--<div class="ui relaxed divided list">
     {{#each model as |device|}}
         <div class="item">
             <div class="content">
@@ -7,4 +7,27 @@
             </div>
         </div>
     {{/each}}
-</div>
+</div>-->
+
+<table class="ui celled table">
+  <thead>
+    <tr><th>Название</th>
+    <th>Идентификатор</th>
+    <th>Класс</th>
+    <th>Последний выход на связь</th>
+  </tr></thead>
+  <tbody>
+    {{#each model as |device|}}
+        <tr>
+            <td>
+                {{#link-to "device-data" device.id}}
+                  {{device.devName}}
+                {{/link-to}}
+            </td>
+            <td>{{device.devEui}}</td>
+            <td>{{device.class}}</td>
+            <td>{{device.last_data_ts_strokoi}}</td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>

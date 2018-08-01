@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('about');
   this.route('login');
   this.route('report');
+  this.route('device-data', { path: '/device-data/:device_id' });
 });
 
 export default Router;
